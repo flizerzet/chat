@@ -92,6 +92,9 @@
             renderMessage("bot", loadMessage(text));
             input.value = "";
             document.querySelector(".messages").scrollTop = document.querySelector(".messages").clientHeight;
+            setTimeout((() => {
+                document.querySelector(".messages").scrollTop = document.querySelector(".messages").clientHeight;
+            }), 1e3);
         }
     }));
     input.addEventListener("keyup", (e => {
@@ -101,6 +104,9 @@
             renderMessage("bot", loadMessage(text));
             input.value = "";
             document.querySelector(".messages").scrollTop = document.querySelector(".messages").clientHeight;
+            setTimeout((() => {
+                document.querySelector(".messages").scrollTop = document.querySelector(".messages").clientHeight;
+            }), 1e3);
         }
     }));
     function renderMessage(sender, text) {
